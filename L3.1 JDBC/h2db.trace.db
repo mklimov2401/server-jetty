@@ -17,7 +17,7 @@ select * from users where user_name=tully [42122-187]
 	at dbService.executor.Executor.execQuery(Executor.java:27)
 	at dbService.dao.UsersDAO.getUserId(UsersDAO.java:25)
 	at dbService.DBService.addUser(DBService.java:28)
-	at main.Main.main(Main.java:12)
+	at main.LMain.main(Main.java:12)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

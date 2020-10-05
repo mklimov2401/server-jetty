@@ -19,6 +19,7 @@ import java.util.Map;
  */
 public class PageGenerator {
     private static final String HTML_DIR = "templates";
+    private static final String MODULE_DIR = "L1.1 Simple web server";
 
     private static PageGenerator pageGenerator;
     private final Configuration cfg;
@@ -32,13 +33,14 @@ public class PageGenerator {
     public String getPage(String filename, Map<String, Object> data) {
         Writer stream = new StringWriter();
         try {
-            Template template = cfg.getTemplate(HTML_DIR + File.separator + filename);
+            Template template = cfg.getTemplate(MODULE_DIR + File.separator + HTML_DIR + File.separator + filename);
             template.process(data, stream);
         } catch (IOException | TemplateException e) {
             e.printStackTrace();
         }
         return stream.toString();
     }
+
 
     private PageGenerator() {
         cfg = new Configuration();
